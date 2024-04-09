@@ -22,7 +22,7 @@ class Post(models.Model):
 
 
 class Comment(models.Model):
-    post = models.ForeignKey('blog.Post',
+    post = models.ForeignKey('appblog.Post',
                              on_delete=models.CASCADE,
                              related_name='comments')
     author = models.CharField(max_length=200)
